@@ -50,9 +50,9 @@ const Introduction = () => {
                 </div>
             </div>
             {!isTypingComplete && (
-                <div className="row justify-content-center mt-3">
-                    <div className="col-12 text-center">
-                        <button onClick={() => setIsTypingComplete(true)} className="btn btn-outline-secondary btn-lg">
+                <div className="row justify-content-end mt-3">
+                    <div className="col-12 text-end">
+                        <button onClick={() => setIsTypingComplete(true)} className="btn btn-outline-light ">
                             Skip
                         </button>
                     </div>
