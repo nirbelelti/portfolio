@@ -18,7 +18,7 @@ const Introduction = () => {
         }, textArray.join(' ').length * 120 + 30000); // Adjust timing based on typing speed and delay
 
         return () => clearTimeout(timer);
-    }, []);
+    });
 
     return (
         <>
