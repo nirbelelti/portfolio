@@ -1,7 +1,7 @@
 import {Chrono} from "react-chrono";
 import dtuLogo from '../assets/WorkPlacesLogos/DTU_logo.png';
-import bpLogo from '../assets/WorkPlacesLogos/BPimg.png';
-import superPushLogo from '../assets/WorkPlacesLogos/SuperPush.png';
+import bpLogo from '../assets/WorkPlacesLogos/BP-logo.png';
+import superPushLogo from '../assets/WorkPlacesLogos/SuperPush-logo.png';
 
 const Employment = () => {
     const items = [{
