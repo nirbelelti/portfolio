@@ -1,6 +1,6 @@
-import gmailLogo from '../assets/ToolsLogos/gmail.svg';
-import gitLogo from '../assets/ToolsLogos/githubLogo.png';
-import linkedinLogo from '../assets/ToolsLogos/linkedinLogo.png';
+import gmailLogo from '../assets/ToolsLogos/gmail-logo.svg';
+import gitLogo from '../assets/ToolsLogos/github-logo.png';
+import linkedinLogo from '../assets/ToolsLogos/linkedin-logo.png';
 import LinkWithImage from "./LinkWithImage";
 
 

@@ -1,7 +1,7 @@
 import TypeWriter from "../components/TypeWriter.tsx";
 import {useEffect} from "react";
 import Thumbnail from "../components/Thumbnail.tsx";
-import pageImage from "../assets/flipped_profile.png";
+import pageImage from "../assets/profile-image.png";
 
 
 const AboutMe = () => {

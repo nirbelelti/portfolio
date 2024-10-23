@@ -1,14 +1,14 @@
 import Tech from "../components/Tech.tsx";
-import ror from "../assets/ToolsLogos/ror.png";
-import py from "../assets/ToolsLogos/Python.png";
-import java from "../assets/ToolsLogos/Java.png";
+import ror from "../assets/ToolsLogos/RoR-logo.png";
+import py from "../assets/ToolsLogos/python.png";
+import java from "../assets/ToolsLogos/java-logo.png";
 import dbi from "../assets/ToolsLogos/RDBMS.png";
-import devOps from "../assets/ToolsLogos/DevOps.png";
-import cpp from "../assets/ToolsLogos/cpp.png";
-import arduino from "../assets/ToolsLogos/arduino.png";
-import deployment from "../assets/ToolsLogos/Deployment.png";
-import js from "../assets/ToolsLogos/Js.png";
-import webDesign from "../assets/ToolsLogos/responsiveWebDesign.png";
+import devOps from "../assets/ToolsLogos/DevOps-logo.png";
+import cpp from "../assets/ToolsLogos/cpp-logo.png";
+import arduino from "../assets/ToolsLogos/arduino-logo.png";
+import deployment from "../assets/ToolsLogos/deployment-logo.png";
+import js from "../assets/ToolsLogos/js-logo.png";
+import webDesign from "../assets/ToolsLogos/responsive-web-design.png";
 
 
 const Technologies = () => {

@@ -1,4 +1,4 @@
-import github from '../assets/ToolsLogos/githubLogo.png';
+import github from '../assets/ToolsLogos/github-logo.png';
 
 interface projectProps {
     name: string;
