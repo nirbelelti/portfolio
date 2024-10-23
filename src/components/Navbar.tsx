@@ -49,11 +49,11 @@ const Navbar = () => {
                                     onSetActive={() => setActiveLink('/')}
                                     onClick={handleNavLinkClick}
                                 >
-                                    Home
+                                    About Me
                                 </ScrollLink>
                             ) : (
                                 <Link className={`nav-link ${activeLink === '/' && 'active'}`} to="/">
-                                    Home
+                                    About Me
                                 </Link>
                             )}
                         </li>
