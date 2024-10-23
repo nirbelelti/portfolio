@@ -2,6 +2,7 @@ import {Link, useLocation} from 'react-router-dom';
 import {useEffect, useRef, useState, RefObject} from "react";
 import {Link as ScrollLink} from 'react-scroll';
 import * as rdd from 'react-device-detect';
+import logo from '../assets/logo.png';
 
 // rdd.isMobile = true; //testing the navbar on mobile view
 
@@ -25,7 +26,8 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Navbar</a>
+                <a className="navbar-brand" href="/"> <img src={logo} alt="Logo" width="auto"
+                                                           height="40"/></a>
                 <button
                     className="navbar-toggler"
                     type="button"
