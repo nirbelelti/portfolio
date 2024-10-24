@@ -18,7 +18,7 @@ const TypeWriter = ({
                         textArray,
                         cursorColor = "none",
                         textColor = "silver",
-                        fontSize = "24px",
+                        fontSize = "20px",
                         loop = false,
                         typingSpeed = 120,
                         delaySpeed = 300,
@@ -28,8 +28,8 @@ const TypeWriter = ({
                             fontFamily: "Helvetica",
                             fontWeight: "bold",
                             marginTop: "10px",
-                            color: "silver",
-                            fontSize: "24px"
+                            color: `${textColor}`,
+                            fontSize: `${fontSize}`
                         }
                     }: TypeWriterProps) => {
     const [isTypingComplete, setIsTypingComplete] = useState(false);
@@ -38,7 +38,7 @@ const TypeWriter = ({
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsTypingComplete(true);
-        }, textArray.join(' ').length * 120 + 30000); // Adjust timing based on typing speed and delay
+        }, textArray.join(' ').length * 120 + 3000); // Timing based on typing speed and delay
 
         return () => clearTimeout(timer);
     });
@@ -69,7 +69,7 @@ const TypeWriter = ({
             {!isTypingComplete && (
                 <div className="row justify-content-end mt-3">
                     <div className="col-12 text-end">
-                        <button onClick={() => setIsTypingComplete(true)} className="btn btn-outline-light ">
+                        <button onClick={() => setIsTypingComplete(true)} className="btn btn-outline-secondary ">
                             Skip
                         </button>
                     </div>
@@ -78,7 +78,7 @@ const TypeWriter = ({
             {isTypingComplete && (
                 <div className="row justify-content-center mt-5">
                     <div className="col-12 text-center">
-                        <a href="mailto: nirbelelti@gmail.com" className="btn btn-outline-secondary btn-lg">Contact
+                        <a href="mailto: nirbelelti@gmail.com" className="btn btn-outline-light btn-lg">Contact
                             me</a>
                     </div>
                 </div>
