@@ -1,0 +1,55 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Bootstrap dark background */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+body{
+    color: white;
+    background-image: url('/src/assets/site/robot.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+.chrono-image {
+    width: 100px;
+    height: auto;
+}
+
+.sub-title {
+    color: silver;
+    font-size: large;
+    font-family: "American Typewriter", sans-serif;
+}
+
+.footer-image {
+    width: 60px;
+}
+
+.footer-image:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.content {
+    padding-bottom: 8rem;
+}
+
+.link-icon{
+    width: 20px;
+}
+
+
+
+
+
+
