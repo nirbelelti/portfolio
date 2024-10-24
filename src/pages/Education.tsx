@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useState} from 'react';
 import Certificate from "../components/Certificate.tsx";
 import dtu from "../assets/certificates/MScDiplomaDTU.png";
 import kea from "../assets/certificates/Kea.png";
@@ -26,7 +26,17 @@ const Education = () => {
             img_src: dtu,
             button: 'MSc Computer Science and Engineering',
             alt: 'MSc Diploma in Computer Science and Engineering Nir Belelti',
-            description: 'MSc in Computer Science and Engineering- Technical University of Denmark Specialized in computer security'
+            description: 'MSc in Computer Science and Engineering- Technical University of Denmark Specialized in computer security. ' +
+                'During my MSc in Computer Science and Engineering, I focused on Computer Security. This involved studying ' +
+                'advanced techniques to protect digital systems and data.' +
+                ' My coursework covered in-depth studies in system security, program analysis, data security, and biometric systems.' +
+                ' I gained practical skills in identifying and addressing vulnerabilities, incorporating secure design principles,' +
+                ' and applying logic for security in real-world applications. In addition to my technical studies, ' +
+                'I also explored the intersection of technology and business, emphasizing innovation, startup culture, ' +
+                'and the development of scalable solutions. This combination of technical expertise and entrepreneurial ' +
+                'mindset has equipped me to not only safeguard critical infrastructure and data but also to drive ' +
+                'innovation and bring secure, cutting-edge solutions to market in a rapidly evolving digital landscape.'
+
         },
         {
             name: 'AP Computer Science',
@@ -46,8 +56,8 @@ const Education = () => {
             description: 'I completed a BA in Business Administration with a specialization in Management and Marketing. ' +
                 'This diploma provided me with a comprehensive understanding of business management principles and marketing strategies.' +
                 ' Throughout the program, I gained practical knowledge in areas such as leadership, organizational behavior, ' +
-                'strategic marketing, consumer behavior, and market research. My specialization equipped me with the ' +
-                'skills needed to effectively manage teams, develop marketing plans, and analyze market trends to drive business success.'
+                'strategic marketing, consumer behavior, and market research. My specialization equipped me with the skills' +
+                ' needed to effectively manage teams, develop marketing plans, and analyze market trends to drive business success.'
         },
         {
             name: 'Kubernetes Native Tools',
@@ -105,12 +115,6 @@ const Education = () => {
         }
     ];
 
-    useEffect(() => {
-        document.body.classList.add('blue-wave-bg');
-        return () => {
-            document.body.classList.remove('blue-wave-bg');
-        };
-    }, []);
 
     return (
         <>
