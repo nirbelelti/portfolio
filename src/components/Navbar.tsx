@@ -26,7 +26,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/"> <img src={logo} alt="Logo" width="auto"
+                <a className="navbar-brand" href=""> <img src={logo} alt="Logo" width="auto"
                                                            height="40"/></a>
                 <button
                     className="navbar-toggler"
