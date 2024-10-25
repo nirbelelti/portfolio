@@ -21,7 +21,7 @@ const Projects = () => {
     const apiProjects = [
         {
             name: "Microservices REST API Simulation with TDD",
-            description: "TThis project demonstrates a microservices architecture using technologies such as Java, Maven," +
+            description: "This project demonstrates a microservices architecture using technologies such as Java, Maven," +
                 " RabbitMQ (as a message broker), Cucumber, Docker, and Docker Compose. It showcases Test-Driven Development (TDD)" +
                 " in a microservices environment, with a focus on inter-service communication via RabbitMQ." +
                 " Each service is designed to be stand-alone, using Quarkus to handle web requests and utilizing the " +
