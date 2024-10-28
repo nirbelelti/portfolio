@@ -32,7 +32,7 @@ const Projects = () => {
         },
         {
             name: "Demo User Authentication Service using Flask and JWT",
-            description: "DImplemented in Python (Pasade, MVC, Flask), this demo API leverages Flask, JWT (JSON Web Tokens)," +
+            description: "Implemented in Python (Facade, MVC, Flask), this demo API leverages Flask, JWT (JSON Web Tokens)," +
                 " and SQLAlchemy with SQLite and Redis. It follows best practices for user authentication, including salting" +
                 " and hashing passwords for security. The service returns JWTs for authentication and uses Redis for token s" +
                 "torage and a robust token revocation mechanism. Key design patterns ensure secure, maintainable code and reliable token-based authentication.",
