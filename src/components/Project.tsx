@@ -30,22 +30,21 @@ const Project = ({name, description, src, alt, link, tags}: projectProps) => {
                         <h6>View the repository on GitHub:</h6>
                     </div>
                 </div>
-<div className="row">
-                <div className="col ">
-                    <a href={link} target="_blank" rel="noreferrer" className="btn btn-outline-secondary me-3">
-                        <img src={github} alt="github logo" className="img-fluid link-icon pe-1"/>
-                        {name} repository
-                    </a>
-
+                <div className="row justify-content-center">
+                    <div className="col text-center m-0  m-md-2 ">
+                        <a href={link} target="_blank" rel="noreferrer" className="btn btn-outline-secondary me-3">
+                            <img src={github} alt="github logo" className="img-fluid link-icon pe-1"/>
+                            {name} repository
+                        </a>
+                    </div>
                 </div>
-</div>
                 <div className="row">
-                <div className="col-12 mt-2  ">
-                    <p>
-                        OR View the {name} repository on the following <a href={link} target="_blank" rel="noreferrer"
-                                                                         className="text-truncate">Link</a>
-                    </p>
-                </div>
+                    <div className="col-12 mt-2  ">
+                        <p>
+                           <strong>OR</strong> View the {name} repository on the following <a href={link} target="_blank"
+                                                                              rel="noreferrer"className="text-truncate">Link</a>
+                        </p>
+                    </div>
                 </div>
             </div>}
             {tags && tags.length > 0 &&
