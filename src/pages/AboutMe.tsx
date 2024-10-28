@@ -18,13 +18,13 @@ const AboutMe = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12 col-md-7 ">
-                        <div className="row">
+                        <div className="row justify-content-center">
                             <h2 className="text-danger font-weight-bold">Hi there,</h2>
                             <h1> I'm Nir a <span className="text-primary">Software Engineer</span></h1>
                         </div>
                         <TypeWriter textArray={textArray}/>
                     </div>
-                    <div className="col-4  mb-5 d-none d-md-inline">
+                    <div className="col-4 justify-content-center  mb-5 d-none d-md-inline">
                         <Thumbnail src={pageImage} alt={"profile"}/>
                     </div>
                 </div>
