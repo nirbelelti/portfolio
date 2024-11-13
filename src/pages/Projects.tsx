@@ -68,7 +68,24 @@ const Projects = () => {
             technologies: ["React", "Vite", "JavaScript", "TypeScript", "NPM", "React Routs", "UI Design"],
             image: react,
             link: ""
-        }]
+        },
+        {
+            name: "AI Chatbot with Ruby on Rails",
+            description: "RailsChatBot is a Ruby on Rails application that offers a real-time chat interface for users. " +
+                "This application incorporates Devise for user authentication, ensuring secure access, and uses Turbo Rails" +
+                " for smooth and dynamic interactions, allowing messages to update without requiring a page refresh." +
+                "The core functionality of RailsChatBot facilitates seamless communication with the Gemini API, a robust LLM" +
+                " language generation tool. Through an initializer, the application connects with the Gemini API, sending" +
+                " user queries and receiving intelligent, conversational responses. This setup demonstrates how Rails " +
+                "applications can effectively utilize external APIs to enhance functionality and user engagement within a " +
+                "Turbo-powered chat interface. Additionally, RailsChatBot integrates Sidekiq to manage background processing to save conversation data." +
+                " By offloading API calls and other tasks to Sidekiq workers, the application maintains a fast and responsive" +
+                " user experience, even when handling intensive operations asynchronously.",
+            technologies: ["Ruby on Rails","Rails 7.2","Stimulus", "AI", "Devise", "Turbo Rails","Initializer", "Gemini API","LLM", "Sidekiq", "Gemini API", "HTTP","Callbacks", "RSpec"],
+            image: rails,
+            link: "https://github.com/nirbelelti/RailsAIChatBot"
+        }
+    ]
 
     const devOpsProjects = [
         {
