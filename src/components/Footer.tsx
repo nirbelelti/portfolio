@@ -29,8 +29,8 @@ const Footer = () => {
                             alt="github"/>
                     </div>
                 </div>
-                <div className="row justify-content-center">
-                    <div className="col-8 text-white-50">
+                <div className="row justify-content-center ">
+                    <div className="col-8 text-white-50 d-none d-md-inline">
                         <p>&copy; 2024 All rights reserved.</p>
                     </div>
                 </div>
