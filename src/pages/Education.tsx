@@ -1,13 +1,18 @@
-import { useState} from 'react';
+import {useState} from 'react';
 import Certificate from "../components/Certificate.tsx";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import dtu from "../assets/certificates/MScDiplomaDTU.png";
+import dtuLogo from "../assets/certificates_logos/danmarks-tekniske-universitet-seeklogo.png";
 import kea from "../assets/certificates/Kea.png";
+import keaLogo from "../assets/certificates_logos/kea.png";
 import lander from "../assets/certificates/LanderBA.png";
+import landerLogo from "../assets/certificates_logos/lander.png";
 import kubernetes from "../assets/certificates/CertificateOfCompletion_KubernetesNativeTools2018.png";
 import terraform from "../assets/certificates/CertificateOfCompletion_LearningTerraform2020.png";
 import ror from "../assets/certificates/CertificateOfCompletion_RoR5EssentialTraining.png";
 import ror_ar from "../assets/certificates/CertificateOfCompletion_RoRGetMoreFromActiveRecord.png";
 import ror_stp from "../assets/certificates/CertificateOfCompletion_AddingStripe PaymentsToRoRApplication.png";
+import linkedin from "../assets/certificates_logos/linkedin.png";
 
 const Education = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -24,6 +29,7 @@ const Education = () => {
             name: 'MSc Computer Science and Engineering',
             date: '31/09/2024',
             img_src: dtu,
+            logo: dtuLogo,
             button: 'MSc Computer Science and Engineering',
             alt: 'MSc Diploma in Computer Science and Engineering Nir Belelti',
             description: 'MSc in Computer Science and Engineering- Technical University of Denmark Specialized in computer security. ' +
@@ -42,6 +48,7 @@ const Education = () => {
             name: 'AP Computer Science',
             date: '20/01/17',
             img_src: kea,
+            logo: keaLogo,
             alt: 'AP Degree in Computer science',
             description: 'AP in Computer Science program, Where I gained a comprehensive curriculum covering databases, ' +
                 'information technology, system development, programming, and business understanding. ' +
@@ -52,6 +59,7 @@ const Education = () => {
             name: 'BA in Business administration ',
             date: '24/06/2012',
             img_src: lander,
+            logo: landerLogo,
             alt: 'BA in Business administration',
             description: 'I completed a BA in Business Administration with a specialization in Management and Marketing. ' +
                 'This diploma provided me with a comprehensive understanding of business management principles and marketing strategies.' +
@@ -63,6 +71,7 @@ const Education = () => {
             name: 'Kubernetes Native Tools',
             date: '25/02/2022',
             img_src: kubernetes,
+            logo: linkedin,
             button: 'Kubernetes training',
             alt: 'Kubernetes Native Tools Certificate of Completion',
             description: 'This course provided a comprehensive understanding of Kubernetes and its native tools in this course. ' +
@@ -73,6 +82,7 @@ const Education = () => {
             name: 'Learning Terraform',
             date: '22/03/2022',
             img_src: terraform,
+            logo: linkedin,
             button: 'Terraform training',
             alt: 'Learning Terraform Certificate of Completion',
             description: 'In this course, I gained an in-depth understanding of Terraform, an infrastructure as a code ' +
@@ -85,6 +95,7 @@ const Education = () => {
             name: 'Ruby on Rails 5 Essential Training',
             date: '07/12/2016',
             img_src: ror,
+            logo: linkedin,
             button: 'Ruby on Rails training',
             alt: 'Ruby on Rails 5 Essential Training Certificate of Completion',
             description: 'I completed a course that introduced me to Ruby on Rails, a web application framework written in Ruby.' +
@@ -97,6 +108,7 @@ const Education = () => {
             date: '13/06/2019',
             button: 'RoR Advanced ActiveRecord',
             img_src: ror_ar,
+            logo: linkedin,
             alt: 'Ruby on Rails 5: Get More from ActiveRecord Certificate of Completion',
             description: 'The course provided me with a detailed look at ActiveRecord in Ruby on Rails, ' +
                 'covering database interaction, queries, record management, associations, validations, callbacks, ' +
@@ -106,6 +118,7 @@ const Education = () => {
             name: 'Adding Stripe Payments to Your Ruby on Rails Application',
             date: '04/06/2018',
             img_src: ror_stp,
+            logo: linkedin,
             button: 'RoR Stripe Payments',
             alt: 'Adding Stripe Payments to Your Ruby on Rails Application Certificate of Completion',
             description: 'This course provided an introduction to integrating Stripe payments into a Ruby on Rails application. ' +
@@ -118,64 +131,83 @@ const Education = () => {
 
     return (
         <>
-            <div className="row">
-                <div className="col-12 mt-5">
-                    <h1>Education</h1>
-                </div>
-            </div>
-            <div className="row justify-content-center d-none d-lg-inline">
-                <div className="col-12  mt-5 mb-5">
-                    <div className="btn-group " role="group" aria-label="Basic radio toggle button group">
-                        {certificates.map((cert, index) => (
-                            <div key={index}>
-                                <input
-                                    type="radio"
-                                    className="btn-check"
-                                    name="btnradio"
-                                    id={`btnradio${index}`}
-                                    autoComplete="off"
-                                    data-bs-target="#educationCarousel"
-                                    data-bs-slide-to={index}
-                                    onChange={() => setActiveIndex(index)}
-                                />
-                                <label
-                                    className={`btn btn-outline-light btn-sm ${activeIndex === index ? 'active' : ''}`}
-                                    htmlFor={`btnradio${index}`}
-                                >
-                                    {cert.button ? cert.button : cert.name}
-                                </label>
-                            </div>
-                        ))}
+            <section id={"education"}>
+                <div className="row">
+                    <div className="col-12 mt-5">
+                        <h1>Education</h1>
                     </div>
                 </div>
-            </div>
-
-            <div className="row justify-content-center ">
-                <div className="col text-center">
-                    <div id="educationCarousel" className="carousel slide">
-                        <div className="carousel-inner">
+                <div className="row justify-content-center d-none d-lg-inline">
+                    <div className="col-12  mt-5 mb-5">
+                        <div className="btn-group " role="group" aria-label="Basic radio toggle button group">
                             {certificates.map((cert, index) => (
-                                <div key={index} className={`carousel-item ${activeIndex === index ? "active" : ""}`}>
-                                    <Certificate src={cert['img_src']} name={cert['name']} alt={cert['alt']}
-                                                 date={cert['date']} description={cert['description']}/>
+                                <div key={index}>
+                                    <input
+                                        type="radio"
+                                        className="btn-check"
+                                        name="btnradio"
+                                        id={`btnradio${index}`}
+                                        autoComplete="off"
+                                        data-bs-target="#educationCarousel"
+                                        data-bs-slide-to={index}
+                                        onChange={() => setActiveIndex(index)}
+                                    />
+                                    <label
+                                        className={`btn btn-outline-light btn-sm ${activeIndex === index ? 'active' : ''}`}
+                                        htmlFor={`btnradio${index}`}
+                                    >
+                                        {cert.button ? cert.button : cert.name}
+                                    </label>
                                 </div>
                             ))}
                         </div>
-                        <button className="carousel-control-prev ps-0 ps-md-2 ps-lg-5" type="button"
+                    </div>
+                </div>
+
+                <div className="row justify-content-center g-0 ">
+
+                    <div className="col-1 d-flex justify-content-end align-items-center position-sticky">
+                        <button className="carousel-control-prev btn btn-lg"
+                                type="button"
                                 data-bs-target="#educationCarousel"
                                 data-bs-slide="prev" onClick={handlePrev}>
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span aria-hidden="true">
+                            <i className="bi bi-caret-left fs-1"></i>
+                        </span>
                             <span className="visually-hidden">Previous</span>
                         </button>
-                        <button className="carousel-control-next pe-0 pe-lg-5 pe-md-2" type="button"
+                    </div>
+                    <div className="col-10">
+                        <div id="educationCarousel" className="carousel slide">
+                            <div className="carousel-inner">
+                                {certificates.map((cert, index) => (
+                                    <div key={index}
+                                         className={`carousel-item ${activeIndex === index ? "active" : ""}`}>
+                                        <Certificate src={cert['img_src']} name={cert['name']} logo={cert['logo']}
+                                                     alt={cert['alt']}
+                                                     date={cert['date']} description={cert['description']}/>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        className="col-1 d-block position-sticky justify-content-end align-items-center position-sticky">
+                        <button className="carousel-control-next btn btn-lg"
+                                type="button"
                                 data-bs-target="#educationCarousel"
                                 data-bs-slide="next" onClick={handleNext}>
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span aria-hidden="true">
+                                <i className="bi bi-caret-right fs-1"></i>
+                            </span>
                             <span className="visually-hidden">Next</span>
                         </button>
                     </div>
                 </div>
-            </div>
+            </section>
+
+
         </>
     );
 };
