@@ -1,5 +1,5 @@
 import {Link, useLocation} from 'react-router-dom';
-import {useEffect, useRef, useState, RefObject} from "react";
+import {RefObject, useEffect, useRef, useState} from "react";
 import {Link as ScrollLink} from 'react-scroll';
 import * as rdd from 'react-device-detect';
 import logo from '../assets/logo.png';
@@ -26,8 +26,8 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href=""> <img src={logo} alt="Logo" width="auto"
-                                                           height="40"/></a>
+                <a className="navbar-brand d-none d-md-inline" href=""> <img src={logo} alt="Logo" width="auto"
+                                                           height="80"/></a>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -48,7 +48,7 @@ const Navbar = () => {
                                     to="home"
                                     smooth={true}
                                     duration={500}
-                                    onSetActive={() => setActiveLink('/')}
+                                    onSetActive={() => setActiveLink('home')}
                                     onClick={handleNavLinkClick}
                                 >
                                     About Me
@@ -66,6 +66,7 @@ const Navbar = () => {
                                     to="technologies"
                                     smooth={true}
                                     duration={500}
+                                    onSetActive={() => setActiveLink('technologies')}
                                     onClick={handleNavLinkClick}
 
                                 >
@@ -85,6 +86,7 @@ const Navbar = () => {
                                     to="projects"
                                     smooth={true}
                                     duration={500}
+                                    onSetActive={() => setActiveLink('projects')}
                                     onClick={handleNavLinkClick}
 
                                 >
@@ -103,7 +105,7 @@ const Navbar = () => {
                                     to="education"
                                     smooth={true}
                                     duration={500}
-                                    onSetActive={() => setActiveLink('/education')}
+                                    onSetActive={() => setActiveLink('education')}
                                     onClick={handleNavLinkClick}
                                 >
                                     Education
@@ -127,7 +129,7 @@ const Navbar = () => {
                                     to="employment"
                                     smooth={true}
                                     duration={500}
-                                    onSetActive={() => setActiveLink('/employment')}
+                                    onSetActive={() => setActiveLink('employment')}
                                     onClick={handleNavLinkClick}
                                 >
                                     Employment
