@@ -5,7 +5,7 @@ import superPushLogo from '../assets/WorkPlacesLogos/SuperPush-logo.png';
 
 const Employment = () => {
     const items = [{
-        title: "September 2023 - August 2024",
+        title: "2023 - 2024",
         cardTitle: "DTU MSc in Computer Science and Engineering",
         url: "https://www.dtu.dk/english/education/graduate/msc-programmes/computer-science-and-engineering",
         cardSubtitle: "Technical University of Denmark -  Full time student and graduation of MSc in Computer Science and Engineering",
@@ -20,7 +20,7 @@ const Employment = () => {
         }
     },
         {
-            title: "August 2016 - August 2023",
+            title: "2016 - 2023",
             cardTitle: "Brain Plus",
             url: "https://www.brain-plus.com/",
             cardSubtitle: "Full stack developer",
@@ -82,22 +82,24 @@ const Employment = () => {
 
     return (
         <>
-            <div className="row mt-5">
-                <div className="col">
-                    <h1>Employment</h1>
+            <section id="employment">
+                <div className="row mt-5">
+                    <div className="col" >
+                        <h1>Employment</h1>
+                    </div>
                 </div>
-            </div>
-            <div className="mb-5 pb-5">
-                <Chrono items={items}
-                        mode="VERTICAL_ALTERNATING"
-                        disableToolbar={true}
-                        mediaSettings={{align: 'right', fit: 'cover', imageFit: "contain"}}
-                        scrollable={true}
-                        disableInteraction={true}
-                />
-            </div>
-        </>
-    )
-}
+                <div className="mb-5 pb-5">
+                    <Chrono items={items}
+                            mode="VERTICAL_ALTERNATING"
+                            disableToolbar={true}
+                            mediaSettings={{align: 'right', fit: 'cover', imageFit: "contain"}}
+                            scrollable={true}
+                            disableInteraction={true}
+                    />
+                </div>
+            </section>
+            </>
+            )
+            }
 
-export default Employment;
+            export default Employment;
