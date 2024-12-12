@@ -41,8 +41,10 @@ const Project = ({name, description, src, alt, link, tags}: projectProps) => {
                 <div className="row">
                     <div className="col-12 mt-2  ">
                         <p>
-                           <strong>OR</strong> View the {name} repository on the following <a href={link} target="_blank"
-                                                                              rel="noreferrer"className="text-truncate">Link</a>
+                            <strong>OR</strong> View the {name} repository on the following <a href={link}
+                                                                                               target="_blank"
+                                                                                               rel="noreferrer"
+                                                                                               className="text-truncate">Link</a>
                         </p>
                     </div>
                 </div>
@@ -59,13 +61,12 @@ const Project = ({name, description, src, alt, link, tags}: projectProps) => {
                     <div className="row">
                         {tags?.map((tag, index) => (
                             <div key={index} className="col-auto">
-                                <span className="badge bg-secondary">{tag}</span>
+                                <span className="badge rounded-pill bg-dark bg-secondary">{tag}</span>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
