@@ -32,12 +32,15 @@ const Projects = () => {
         },
         {
             name: "Demo User Authentication Service using Flask and JWT",
-            description: "Implemented in Python (Facade, MVC, Flask), this demo API leverages Flask, JWT (JSON Web Tokens)," +
-                " and SQLAlchemy with SQLite and Redis. It follows best practices for user authentication, including salting" +
-                " and hashing passwords for security. The service returns JWTs for authentication and uses Redis for token s" +
-                "torage and a robust token revocation mechanism. Key design patterns ensure secure, maintainable code and reliable token-based authentication.",
+            description: "This Python-based demo API (implemented using the Facade pattern, MVC architecture, and Flask " +
+                "framework) highlights advanced security practices. It demonstrates secure password management by salting" +
+                " and hashing passwords to protect against leaks. The API utilizes JSON Web Tokens (JWT) for authentication" +
+                " and employs Redis for token storage and validation, enabling an aggressive token refreshing mechanism and" +
+                " a robust revocation process. Built with SQLAlchemy, SQLite, and Redis, the project follows best practices" +
+                " for user authentication and leverages proven design patterns to deliver secure, maintainable, and reliable" +
+                " code.",
             technologies: ["Flask", "Python", "SQLAlchemy", "JWT", "TestUnit", "Singleton", "Facade", "Salting", "RESTful",
-                "Redis", "MVC"],
+                "Redis", "MVC", "SQLite", "Data Security", "Hashing"],
             image: python,
             link: "https://github.com/nirbelelti/python-secure-flask-api-jwt-demo"
         },
@@ -81,7 +84,7 @@ const Projects = () => {
                 "Turbo-powered chat interface. Additionally, RailsChatBot integrates Sidekiq to manage background processing to save conversation data." +
                 " By offloading API calls and other tasks to Sidekiq workers, the application maintains a fast and responsive" +
                 " user experience, even when handling intensive operations asynchronously.",
-            technologies: ["Ruby on Rails","Rails 7.2","Stimulus", "AI", "Devise", "Turbo Rails","Initializer", "Gemini API","LLM", "Sidekiq", "Gemini API", "HTTP","Callbacks", "RSpec"],
+            technologies: ["Ruby on Rails", "Rails 7.2", "Stimulus", "AI", "Devise", "Turbo Rails", "Initializer", "Gemini API", "LLM", "Sidekiq", "Gemini API", "HTTP", "Callbacks", "RSpec"],
             image: rails,
             link: "https://github.com/nirbelelti/RailsAIChatBot"
         }
@@ -113,12 +116,14 @@ const Projects = () => {
     ]
     return (
         <>
-            <div className="row mt-5">
-                <h1>Projects</h1>
-            </div>
-            <ProjectsGroup group_icon={apiLogo} icon_alt={"api logo"} projects={apiProjects}/>
-            <ProjectsGroup group_icon={webDev} icon_alt={'Web Development logo'} projects={frontEndProjects}/>
-            <ProjectsGroup group_icon={devOpsLogo} icon_alt={'DevOps logo'} projects={devOpsProjects}/>
+            <section id={"projects"}>
+                <div className="row mt-5" >
+                    <h1>Projects</h1>
+                </div>
+                <ProjectsGroup group_icon={apiLogo} icon_alt={"api logo"} projects={apiProjects}/>
+                <ProjectsGroup group_icon={webDev} icon_alt={'Web Development logo'} projects={frontEndProjects}/>
+                <ProjectsGroup group_icon={devOpsLogo} icon_alt={'DevOps logo'} projects={devOpsProjects}/>
+            </section>
         </>
     )
 }
