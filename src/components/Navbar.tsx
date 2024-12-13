@@ -1,10 +1,11 @@
 import {Link, useLocation} from 'react-router-dom';
-import {RefObject, useEffect, useRef, useState} from "react";
+import {MouseEvent, RefObject, useEffect, useRef, useState} from "react";
+
 import {Link as ScrollLink} from 'react-scroll';
 import * as rdd from 'react-device-detect';
 import logo from '../assets/logo.png';
 
-// rdd.isMobile = true; //testing the navbar on mobile view
+//rdd.isMobile = true; //testing the navbar on mobile view
 
 
 const Navbar = () => {
@@ -17,7 +18,13 @@ const Navbar = () => {
         setActiveLink(location.pathname);
     }, [location]);
 
-    const handleNavLinkClick = () => {
+    const handleNavLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        const clickedLink = event.currentTarget;
+        clickedLink.classList.add('active');
+
         if (navbarCollapseRef.current && navbarCollapseRef.current.classList.contains('show')) {
             navbarCollapseRef.current.classList.remove('show');
         }
@@ -26,8 +33,9 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div className="container-fluid">
-                <a className="navbar-brand d-none d-md-inline" href=""> <img src={logo} alt="Logo" width="auto"
-                                                           height="80"/></a>
+                <a className="navbar-brand d-none d-md-inline" href="">
+                    <img src={logo} alt="Logo" width="auto" height="80"/>
+                </a>
                 <button
                     className="navbar-toggler"
                     type="button"
