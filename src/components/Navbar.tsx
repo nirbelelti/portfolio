@@ -98,11 +98,11 @@ const Navbar = () => {
                                     onClick={handleNavLinkClick}
 
                                 >
-                                    Projects
+                                    Demo Projects
                                 </ScrollLink>
                             ) : (
                                 <Link className={`nav-link ${activeLink === '/projects' && 'active'}`} to="/projects">
-                                    Projects
+                                    Demo Projects
                                 </Link>
                             )}
                         </li>

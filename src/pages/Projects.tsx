@@ -118,7 +118,7 @@ const Projects = () => {
         <>
             <section id={"projects"}>
                 <div className="row mt-5" >
-                    <h1>Projects</h1>
+                    <h1>Demo Projects</h1>
                 </div>
                 <ProjectsGroup group_icon={apiLogo} icon_alt={"api logo"} projects={apiProjects}/>
                 <ProjectsGroup group_icon={webDev} icon_alt={'Web Development logo'} projects={frontEndProjects}/>
