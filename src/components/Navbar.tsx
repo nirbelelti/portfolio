@@ -57,7 +57,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     onSetActive={() => setActiveLink('home')}
-                                    onClick={handleNavLinkClick}
+                                    onClick={()=>handleNavLinkClick}
                                 >
                                     About Me
                                 </ScrollLink>
@@ -75,7 +75,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     onSetActive={() => setActiveLink('technologies')}
-                                    onClick={handleNavLinkClick}
+                                    onClick={()=>handleNavLinkClick}
 
                                 >
                                     Technologies
@@ -95,7 +95,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     onSetActive={() => setActiveLink('projects')}
-                                    onClick={handleNavLinkClick}
+                                    onClick={()=>handleNavLinkClick}
 
                                 >
                                     Demo Projects
@@ -114,7 +114,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     onSetActive={() => setActiveLink('education')}
-                                    onClick={handleNavLinkClick}
+                                    onClick={()=>handleNavLinkClick}
                                 >
                                     Education
                                 </ScrollLink>
@@ -138,7 +138,7 @@ const Navbar = () => {
                                     smooth={true}
                                     duration={500}
                                     onSetActive={() => setActiveLink('employment')}
-                                    onClick={handleNavLinkClick}
+                                    onClick={()=>handleNavLinkClick}
                                 >
                                     Employment
                                 </ScrollLink>
