@@ -48,6 +48,11 @@ body{
     width: 20px;
 }
 
+.replay:hover {
+    color: lightgray;
+    cursor: pointer;
+}
+
 
 
 
