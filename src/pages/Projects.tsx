@@ -28,7 +28,7 @@ const Projects = () => {
                 "Facade design pattern. Docker is used to containerize each service, while Docker Compose orchestrates the system.",
             technologies: ["Maven", "Java", "RabbitMQ", "Cucumber", "Docker", "Docker-Compose", "Quarkus"],
             image: java,
-            link: "https://github.com/nirbelelti/JavaMicroservicesSimulation/tree/main/REST"
+            link: "https://github.com/nirbelelti/JavaMicroservicesSimulation"
         },
         {
             name: "Demo User Authentication Service using Flask and JWT",
