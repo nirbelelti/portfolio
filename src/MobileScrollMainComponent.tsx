@@ -3,12 +3,15 @@ import Technologies from "./pages/Technologies.tsx";
 import Projects from "./pages/Projects.tsx";
 import Education from "./pages/Education.tsx";
 import Employment from "./pages/Employment.tsx";
+import Ux from "./pages/Ux.tsx";
+import Modeling from "./pages/Modeling.tsx";
+import AIEngineering from "./pages/AIEngineering.tsx";
 
 const MobileScrollMainComponent = () => {
     return (
         <>
             <section id="home">
-              <AboutMe/>
+                <AboutMe/>
             </section>
             <section id="technologies">
                 <Technologies/>
@@ -17,10 +20,19 @@ const MobileScrollMainComponent = () => {
                 <Projects/>
             </section>
             <section id="education">
-            <Education/>
+                <Education/>
             </section>
             <section id="employment">
-              <Employment/>
+                <Employment/>
+            </section>
+            <section id="ux">
+                <Ux/>
+            </section>
+            <section id="modeling">
+                <Modeling/>
+            </section>
+            <section id="ai">
+                <AIEngineering/>
             </section>
         </>
     );
