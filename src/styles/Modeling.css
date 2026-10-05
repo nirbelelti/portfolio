@@ -1,0 +1,33 @@
+.diagram-fade-in {
+    animation: diagramFadeIn 0.6s ease-in;
+}
+
+@keyframes diagramFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.diagram-badge {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.diagram-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diagram-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5) !important;
+}
+
+.diagram-hint {
+    font-size: 0.8rem;
+    color: silver;
+}
+
+.progression-strip {
+    border-left: 3px solid #0d6efd;
+    padding-left: 1rem;
+}
