@@ -26,7 +26,7 @@ const Projects = () => {
                 " in a microservices environment, with a focus on inter-service communication via RabbitMQ." +
                 " Each service is designed to be stand-alone, using Quarkus to handle web requests and utilizing the " +
                 "Facade design pattern. Docker is used to containerize each service, while Docker Compose orchestrates the system.",
-            technologies: ["Maven", "Java", "RabbitMQ", "Cucumber", "Docker", "Docker-Compose", "Quarkus"],
+            technologies: ["Maven", "Java", "RabbitMQ", "Cucumber", "Docker", "Docker-Compose", "Quarkus", "Microservices", "Design Patterns", "TDD", "RESTful", "API", "Facade", "Adapter", "Singleton"],
             image: java,
             link: "https://github.com/nirbelelti/JavaMicroservicesSimulation"
         },
