@@ -1,0 +1,123 @@
+.ai-pipeline {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+}
+
+.pipeline-step {
+    flex: 1;
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    transition: background 0.2s ease;
+}
+
+.pipeline-step:first-child { border-radius: 0.375rem 0 0 0.375rem; }
+.pipeline-step:last-child  { border-radius: 0 0.375rem 0.375rem 0; }
+
+.pipeline-step:hover {
+    background: rgba(13, 110, 253, 0.1);
+}
+
+.pipeline-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.pipeline-icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.pipeline-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.pipeline-role {
+    font-size: 0.65rem;
+    color: silver;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.pipeline-role.role-human { color: #0d6efd; }
+.pipeline-role.role-ai    { color: #198754; }
+.pipeline-role.role-both  { color: #ffc107; }
+
+@media (max-width: 767px) {
+    .ai-pipeline {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .pipeline-step:first-child { border-radius: 0.375rem 0.375rem 0 0; }
+    .pipeline-step:last-child  { border-radius: 0 0 0.375rem 0.375rem; }
+
+    .pipeline-step:not(:last-child)::after {
+        right: 50%;
+        bottom: -8px;
+        top: auto;
+        transform: translateX(50%);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgba(255, 255, 255, 0.2);
+        border-bottom: none;
+    }
+}
+
+.principle-card {
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.375rem;
+    padding: 0.85rem 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.principle-card:hover {
+    border-color: rgba(13, 110, 253, 0.5);
+}
+
+.principle-icon {
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    color: #0d6efd;
+}
+
+.principle-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.principle-body {
+    font-size: 0.8rem;
+    color: silver;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+}
+
+.capability-card {
+    transition: transform 0.2s ease;
+}
+
+.capability-card:hover {
+    transform: translateY(-2px);
+}
