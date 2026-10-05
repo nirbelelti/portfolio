@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 
+/Makefile
+/CLAUDE.md
+/.claude/
+/build/
+tsconfig.*.tsbuildinfo
