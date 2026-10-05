@@ -2,13 +2,26 @@ import {Chrono} from "react-chrono";
 import dtuLogo from '../assets/WorkPlacesLogos/DTU_logo.png';
 import bpLogo from '../assets/WorkPlacesLogos/BP-logo.png';
 import superPushLogo from '../assets/WorkPlacesLogos/SuperPush-logo.png';
+import freelanceLogo from '../assets/WorkPlacesLogos/freelancerLogo.png';
 
 const Employment = () => {
     const items = [{
+        title: "2023 - Present",
+        cardTitle: "Freelance Software Engineer & Consultant",
+        cardSubtitle: "Commercial web development · Security consulting · Temporary team engagements",
+        cardDetailedText: "Since 2023 I have been working as a freelance software engineer and consultant, delivering commercial websites and web applications for clients across multiple sectors. My work spans full-stack development with a strong focus on security — implementing tight authentication, authorization, and data protection standards across every project.\n\nI design and build reusable component architectures and integrate modern tooling, including AI-assisted workflows, to accelerate delivery without compromising engineering quality. I also contribute within temporary hired teams, joining projects as a senior engineer where rapid onboarding, clear communication, and high technical standards are equally essential.",
+        media: {
+            type: "IMAGE",
+            source: {
+                url: freelanceLogo,
+            },
+        },
+    },
+    {
         title: "2023 - 2024",
         cardTitle: "DTU MSc in Computer Science and Engineering",
         url: "https://www.dtu.dk/english/education/graduate/msc-programmes/computer-science-and-engineering",
-        cardSubtitle: "Technical University of Denmark -  Full time student and graduation of MSc in Computer Science and Engineering",
+        cardSubtitle: "Technical University of Denmark - Full-time student and graduation of MSc in Computer Science and Engineering",
         cardDetailedText: "As started in industrial MSc program where I have been allowed to participate wile continuing  full time work, I have been decided to dedicate my full time to the program and graduate in 2024 the time whas well spent where I tooke advaced courses in computer security and innovation and my master thesis was in the field implementation of service technology in cafes and restaurants archived the highest grade possible",
 
         media: {
