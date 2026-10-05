@@ -125,10 +125,57 @@ const Navbar = () => {
                             )}
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link disabled">UX</a>
+                            {rdd.isMobile ? (
+                                <ScrollLink
+                                    className={`nav-link ${activeLink === '/ux' && 'active'}`}
+                                    to="education"
+                                    smooth={true}
+                                    duration={500}
+                                    onSetActive={() => setActiveLink('ux')}
+                                    onClick={()=>handleNavLinkClick}
+                                >
+                                    UX/UI
+                                </ScrollLink>
+                            ) : (
+                                <Link className={`nav-link disabled ${activeLink === '/ux' && 'active'}`} to="/ux">
+                                    UX/UI
+                                </Link>
+                            )}                        </li>
+                        <li className="nav-item mx-2">
+                            {rdd.isMobile ? (
+                                <ScrollLink
+                                    className={`nav-link ${activeLink === '/modeling' && 'active'}`}
+                                    to="modeling"
+                                    smooth={true}
+                                    duration={500}
+                                    onSetActive={() => setActiveLink('modeling')}
+                                    onClick={() => handleNavLinkClick}
+                                >
+                                    System Modeling
+                                </ScrollLink>
+                            ) : (
+                                <Link className={`nav-link ${activeLink === '/modeling' && 'active'}`} to="/modeling">
+                                    System Modeling
+                                </Link>
+                            )}
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link disabled">Planning and Modeling</a>
+                            {rdd.isMobile ? (
+                                <ScrollLink
+                                    className={`nav-link ${activeLink === '/ai' && 'active'}`}
+                                    to="ai"
+                                    smooth={true}
+                                    duration={500}
+                                    onSetActive={() => setActiveLink('ai')}
+                                    onClick={() => handleNavLinkClick}
+                                >
+                                    AI & Agents
+                                </ScrollLink>
+                            ) : (
+                                <Link className={`nav-link ${activeLink === '/ai' && 'active'}`} to="/ai">
+                                    AI & Agents
+                                </Link>
+                            )}
                         </li>
                         <li className="nav-item mx-2">
                             {rdd.isMobile ? (
