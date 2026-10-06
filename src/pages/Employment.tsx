@@ -106,7 +106,6 @@ const Employment = () => {
                             mode="VERTICAL_ALTERNATING"
                             disableToolbar={true}
                             mediaSettings={{align: 'right', fit: 'cover', imageFit: "contain"}}
-                            scrollable={true}
                             disableInteraction={true}
                     />
                 </div>
