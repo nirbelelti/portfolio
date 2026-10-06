@@ -2,14 +2,14 @@ import {Chrono} from "react-chrono";
 import dtuLogo from '../assets/WorkPlacesLogos/DTU_logo.png';
 import bpLogo from '../assets/WorkPlacesLogos/BP-logo.png';
 import superPushLogo from '../assets/WorkPlacesLogos/SuperPush-logo.png';
-import freelanceLogo from '../assets/WorkPlacesLogos/freelancerLogo.png';
+import freelanceLogo from '../assets/WorkPlacesLogos/freelance-logo.png';
 
 const Employment = () => {
     const items = [{
         title: "2023 - Present",
         cardTitle: "Freelance Software Engineer & Consultant",
         cardSubtitle: "Commercial web development · Security consulting · Temporary team engagements",
-        cardDetailedText: "Since 2023 I have been working as a freelance software engineer and consultant, delivering commercial websites and web applications for clients across multiple sectors. My work spans full-stack development with a strong focus on security — implementing tight authentication, authorization, and data protection standards across every project.\n\nI design and build reusable component architectures and integrate modern tooling, including AI-assisted workflows, to accelerate delivery without compromising engineering quality. I also contribute within temporary hired teams, joining projects as a senior engineer where rapid onboarding, clear communication, and high technical standards are equally essential.",
+        cardDetailedText: "Since 2023, I have been working as a freelance software engineer and consultant, delivering commercial websites and web applications for clients across multiple sectors. My work spans full-stack development with a strong focus on security — implementing tight authentication, authorization, and data protection standards across every project.\n\nI design and build reusable component architectures and integrate modern tooling, including AI-assisted workflows, to accelerate delivery without compromising engineering quality. I also contribute within temporary hired teams, joining projects as a senior engineer where rapid onboarding, clear communication, and high technical standards are equally essential.",
         media: {
             type: "IMAGE",
             source: {
