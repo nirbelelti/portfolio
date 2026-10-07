@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Nir Belelti — portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio of Nir Belelti, software engineer in Copenhagen. Live at https://nirbelelti.github.io/portfolio/.
 
-Currently, two official plugins are available:
+A single-page React + TypeScript site, prerendered to static HTML at build time and deployed to GitHub Pages. No UI framework: layout and motion are plain CSS, interactions use native `<dialog>`, `<details>` and IntersectionObserver.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Commands
 
-## Expanding the ESLint configuration
+| Command          | What it does                                                        |
+|------------------|---------------------------------------------------------------------|
+| `npm run dev`    | Dev server at http://localhost:5173/portfolio/                      |
+| `npm run build`  | Type-check, build, then prerender the page into `build/index.html`  |
+| `npm run preview`| Serve the production build at http://localhost:4173/portfolio/      |
+| `npm test`       | Unit tests (Vitest)                                                 |
+| `npm run lint`   | ESLint                                                              |
+| `npm run deploy` | Build and publish `build/` to GitHub Pages                          |
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Structure
 
-- Configure the top-level `parserOptions` property like this:
+- `src/content/` — all copy and data (profile, capabilities, projects, modeling, AI, experience, education). Edit text here.
+- `src/sections/` — one component per page section, in page order (see `App.tsx`).
+- `src/components/` — shared building blocks (header, section wrapper, image dialog, tags, icons).
+- `src/hooks/` — scroll state, active section, reveal-on-scroll, legacy route redirect, print behaviour.
+- `src/styles/tokens.css` — the design system: colour (light and dark), type, spacing, radius, shadow and motion tokens.
+- `src/styles/print.css` — turns the page into a résumé when printed or saved as PDF.
+- `scripts/prerender.mjs` — renders the app to HTML after the build and preloads the above-the-fold fonts.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Old hash routes such as `#/modeling` or `#/employment` are redirected to the matching section.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Images
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Images are committed as optimised WebP next to their source PNGs. To regenerate one, for example a diagram:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+magick src/assets/modeling/class_design.png -background white -alpha remove -resize '1600x>' /tmp/out.png
+cwebp -q 82 /tmp/out.png -o src/assets/modeling/class_design.webp
 ```
