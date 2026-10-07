@@ -1,0 +1,144 @@
+.portrait {
+    --drawing-width: 58%;
+    position: relative;
+    aspect-ratio: 100 / 90;
+}
+
+.portrait__drawing {
+    width: var(--drawing-width);
+    filter: var(--portrait-shadow);
+    transform: rotate(-1.2deg);
+    transform-origin: 50% 100%;
+}
+
+.portrait__leaders {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.portrait__leader {
+    fill: none;
+    stroke: var(--ink-faint);
+    stroke-width: 0.2;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    transition: stroke var(--duration-fast) var(--ease-out), stroke-width var(--duration-fast) var(--ease-out);
+}
+
+.portrait__dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    margin: -4.5px 0 0 -4.5px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    background: var(--paper);
+    transition: background-color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+}
+
+.portrait__note {
+    position: absolute;
+    left: 62%;
+    right: 0;
+}
+
+.portrait__note a {
+    display: grid;
+    gap: 0.15rem;
+    padding: var(--space-1) 0;
+    text-decoration: none;
+}
+
+.portrait__note-text {
+    font-size: var(--text-sm);
+    line-height: 1.35;
+    color: var(--ink);
+    text-wrap: balance;
+}
+
+.portrait__leader.is-highlighted {
+    stroke: var(--accent);
+    stroke-width: 0.35;
+}
+
+.portrait__dot.is-highlighted {
+    border-color: var(--accent);
+    background: var(--accent);
+    transform: scale(1.25);
+}
+
+.portrait__note.is-highlighted .portrait__note-text,
+.portrait__note.is-highlighted .label {
+    color: var(--accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .portrait__leader {
+        animation: leader-draw 640ms var(--ease-in-out) both;
+        animation-delay: calc(500ms + var(--order) * 140ms);
+    }
+
+    .portrait__dot {
+        animation: dot-land var(--duration-base) var(--ease-out) both;
+        animation-delay: calc(420ms + var(--order) * 140ms);
+    }
+
+    .portrait__note {
+        animation: note-appear var(--duration-slow) var(--ease-out) both;
+        animation-delay: calc(900ms + var(--order) * 140ms);
+    }
+}
+
+@keyframes leader-draw {
+    from {
+        stroke-dashoffset: 1;
+    }
+}
+
+@keyframes dot-land {
+    from {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+}
+
+@keyframes note-appear {
+    from {
+        opacity: 0;
+        transform: translateX(-6px);
+    }
+}
+
+@media (max-width: 40em) {
+    .portrait {
+        aspect-ratio: auto;
+        display: grid;
+        grid-template-columns: 38% 1fr;
+        align-items: center;
+        gap: var(--space-5);
+    }
+
+    .portrait__drawing {
+        width: 100%;
+    }
+
+    .portrait__leaders,
+    .portrait__dot {
+        display: none;
+    }
+
+    .portrait__notes ul {
+        display: grid;
+        gap: var(--space-3);
+    }
+
+    .portrait__note {
+        position: static;
+        padding-left: var(--space-3);
+        border-left: 1px solid var(--rule-strong);
+    }
+}
