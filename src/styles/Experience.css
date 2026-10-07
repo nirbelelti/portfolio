@@ -1,0 +1,150 @@
+.timeline {
+    border-top: 1px solid var(--rule-strong);
+}
+
+.timeline__entry {
+    display: grid;
+    grid-template-columns: minmax(0, 10rem) minmax(0, 1fr);
+    gap: var(--space-4) var(--space-6);
+    padding-block: var(--space-6);
+    border-bottom: 1px solid var(--rule);
+}
+
+.timeline__entry:target {
+    background: linear-gradient(90deg, var(--accent-wash), transparent 60%);
+}
+
+.timeline__period {
+    padding-top: 0.35rem;
+    color: var(--ink-faint);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    white-space: nowrap;
+}
+
+.role {
+    display: grid;
+    gap: var(--space-4);
+    max-width: 46rem;
+}
+
+.role__head {
+    display: grid;
+    gap: var(--space-1);
+}
+
+.role__title {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 450;
+    line-height: 1.2;
+}
+
+.role__organisation {
+    font-weight: 600;
+}
+
+.role__context {
+    color: var(--ink-muted);
+}
+
+.role__highlights {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.role__highlights li {
+    position: relative;
+    padding-left: var(--space-5);
+    text-wrap: pretty;
+}
+
+.role__highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.8em;
+    width: 0.6rem;
+    height: 1px;
+    background: var(--ink-faint);
+}
+
+.timeline__entry--break {
+    padding-block: var(--space-4);
+}
+
+.timeline__break {
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+    font-style: italic;
+}
+
+.earlier summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-4);
+    list-style: none;
+    cursor: pointer;
+}
+
+.earlier summary::-webkit-details-marker {
+    display: none;
+}
+
+.earlier summary > span {
+    display: grid;
+    gap: var(--space-1);
+}
+
+.earlier summary svg {
+    flex: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.4rem;
+    color: var(--ink-faint);
+    transition: transform var(--duration-base) var(--ease-out);
+}
+
+.earlier[open] summary svg {
+    transform: rotate(180deg);
+}
+
+.earlier__teaser {
+    color: var(--ink-muted);
+}
+
+.earlier__list {
+    display: grid;
+    gap: var(--space-5);
+    margin-top: var(--space-5);
+    padding-left: var(--space-4);
+    border-left: 1px solid var(--rule-strong);
+}
+
+.earlier__role {
+    display: grid;
+    gap: var(--space-1);
+}
+
+.earlier__title {
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+
+.earlier__summary {
+    color: var(--ink-muted);
+    font-size: var(--text-sm);
+}
+
+@media (max-width: 40em) {
+    .timeline__entry {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+    }
+
+    .timeline__period {
+        padding-top: 0;
+    }
+}

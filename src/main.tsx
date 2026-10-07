@@ -1,15 +1,24 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+import {StrictMode} from 'react';
+import {createRoot, hydrateRoot} from 'react-dom/client';
+import '@fontsource-variable/newsreader/wght.css';
+import '@fontsource-variable/newsreader/wght-italic.css';
+import '@fontsource-variable/ibm-plex-sans/wght.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import '@fontsource/ibm-plex-mono/latin-500.css';
+import './styles/tokens.css';
+import './styles/base.css';
 import App from './App.tsx';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import './App.css';
+import './styles/print.css';
 
-createRoot(document.getElementById('root')!).render(
+const root = document.getElementById('root')!;
+const app = (
     <StrictMode>
-        <HashRouter basename="/">
-            <App />
-        </HashRouter>
+        <App/>
     </StrictMode>
 );
+
+if (root.hasChildNodes()) {
+    hydrateRoot(root, app);
+} else {
+    createRoot(root).render(app);
+}
