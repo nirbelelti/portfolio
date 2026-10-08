@@ -1,18 +1,24 @@
 :root {
-    color-scheme: light dark;
+    color-scheme: dark;
 
-    --paper: #ededea;
-    --paper-raised: #f6f6f4;
+    --paper: #121315;
+    --paper-raised: #1a1b1e;
     --sheet: #ffffff;
-    --ink: #17181b;
-    --ink-muted: #474a52;
-    --ink-faint: #61646c;
-    --rule: #d4d4cf;
-    --rule-strong: #b9b9b3;
-    --accent: #2440c9;
-    --accent-ink: #ffffff;
-    --accent-wash: rgb(36 64 201 / 0.08);
-    --portrait-shadow: drop-shadow(0 1px 1px rgb(23 24 27 / 0.18)) drop-shadow(0 18px 30px rgb(23 24 27 / 0.14));
+    --ink: #e9e8e4;
+    --ink-muted: #b4b5ba;
+    --ink-faint: #94969d;
+    --rule: #2a2c30;
+    --rule-strong: #43454b;
+    --accent: #9aabff;
+    --accent-ink: #10131f;
+    --accent-wash: rgb(154 171 255 / 0.1);
+    --accent-soft: rgb(154 171 255 / 0.4);
+    --accent-glow: rgb(154 171 255 / 0.07);
+
+    --surface-sheen: linear-gradient(180deg, rgb(255 255 255 / 0.03), rgb(255 255 255 / 0) 60%);
+    --edge-light: inset 0 1px 0 rgb(255 255 255 / 0.05);
+    --sheet-dim: brightness(0.86);
+    --portrait-shadow: drop-shadow(0 18px 30px rgb(0 0 0 / 0.45));
 
     --font-display: 'Newsreader Variable', 'Iowan Old Style', Georgia, serif;
     --font-body: 'IBM Plex Sans Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -41,9 +47,9 @@
     --radius-lg: 16px;
     --radius-pill: 999px;
 
-    --shadow-sm: 0 1px 2px rgb(23 24 27 / 0.06);
-    --shadow-md: 0 1px 2px rgb(23 24 27 / 0.06), 0 8px 24px rgb(23 24 27 / 0.08);
-    --shadow-lg: 0 2px 4px rgb(23 24 27 / 0.06), 0 24px 60px rgb(23 24 27 / 0.18);
+    --shadow-sm: var(--edge-light), 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow-md: var(--edge-light), 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 40px -12px rgb(0 0 0 / 0.55);
+    --shadow-lg: var(--edge-light), 0 2px 4px rgb(0 0 0 / 0.3), 0 28px 64px -16px rgb(0 0 0 / 0.65);
 
     --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -54,25 +60,4 @@
     --content-width: 72rem;
     --reading-width: 40rem;
     --header-height: 3.5rem;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --paper: #131416;
-        --paper-raised: #1b1c1f;
-        --sheet: #f4f4f1;
-        --ink: #e9e8e4;
-        --ink-muted: #b4b5ba;
-        --ink-faint: #94969d;
-        --rule: #2c2e32;
-        --rule-strong: #43454b;
-        --accent: #9aabff;
-        --accent-ink: #10131f;
-        --accent-wash: rgb(154 171 255 / 0.1);
-        --portrait-shadow: drop-shadow(0 18px 30px rgb(0 0 0 / 0.45));
-
-        --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
-        --shadow-md: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.3);
-        --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.3), 0 24px 60px rgb(0 0 0 / 0.5);
-    }
 }
