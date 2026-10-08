@@ -3,6 +3,7 @@ import {renderToString} from 'react-dom/server';
 import App from './App.tsx';
 import {projects} from './content/projects.ts';
 import {modelViews} from './content/modeling.ts';
+import {designProjects} from './content/interfaces.ts';
 
 const html = renderToString(<App/>);
 const page = new DOMParser().parseFromString(html, 'text/html');
@@ -53,6 +54,12 @@ describe('content', () => {
     });
 
     it('traces one use case through the last three model views', () => {
-        expect(modelViews.map((view) => view.tracesUseCase)).toEqual([false, false, false, true, true, true]);
+        expect(modelViews.map((view) => Boolean(view.highlight))).toEqual([false, false, false, true, true, true]);
+    });
+
+    it('gives every design project something to show', () => {
+        const empty = designProjects.filter((project) => !project.views?.length && !project.pictures?.length);
+
+        expect(empty).toEqual([]);
     });
 });
