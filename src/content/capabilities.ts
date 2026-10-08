@@ -45,6 +45,16 @@ export const capabilities: Capability[] = [
         ],
     },
     {
+        title: 'Product & UX design',
+        summary: 'User stories, wireframes and clickable prototypes in Figma — testing the experience before it is built.',
+        stack: ['Figma', 'User stories', 'Wireframes', 'Clickable prototypes', 'Prototype videos'],
+        basis: ['Professional', 'Study'],
+        evidence: [
+            {label: 'Capish onboarding', href: '#interfaces'},
+            {label: 'BeGreen iterations', href: '#begreen'},
+        ],
+    },
+    {
         title: 'Infrastructure & delivery',
         summary: 'Containers, infrastructure as code and CI/CD — including a microservice backend on Open Telekom Cloud.',
         stack: ['Docker', 'Kubernetes', 'Helm', 'Terraform', 'GitHub Actions', 'Semaphore', 'Jenkins', 'AWS', 'Heroku'],

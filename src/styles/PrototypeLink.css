@@ -1,0 +1,26 @@
+.prototype-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+}
+
+.prototype-link__note {
+    color: var(--ink-faint);
+    font-size: var(--text-xs);
+}
+
+.dialog--prototype {
+    width: min(100% - 2 * var(--space-4), 80rem);
+}
+
+.dialog--prototype .dialog__body {
+    background: #1e1e1e;
+}
+
+.dialog--prototype iframe {
+    display: block;
+    width: 100%;
+    height: min(78dvh, 54rem);
+    border: 0;
+}
