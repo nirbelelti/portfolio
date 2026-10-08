@@ -121,7 +121,7 @@ export const projects: Project[] = [
         details: [
             'Content lives in typed modules, separate from presentation',
             'Native dialog, details and IntersectionObserver instead of UI libraries',
-            'Follows the system colour scheme and reduced-motion settings, and prints as a résumé',
+            'Respects reduced-motion settings and prints as a clean résumé',
             'Built with agentic coding workflows, under my architecture and review',
         ],
         outcome: 'The page arrives as plain HTML; JavaScript only adds interaction.',

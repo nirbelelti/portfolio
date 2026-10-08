@@ -1,5 +1,4 @@
 import {atAGlance} from '../content/profile.ts';
-import PrintResumeButton from './PrintResumeButton.tsx';
 import '../styles/AtAGlance.css';
 
 const AtAGlance = () => (
@@ -13,7 +12,6 @@ const AtAGlance = () => (
                 </div>
             ))}
         </dl>
-        <PrintResumeButton/>
     </div>
 );
 

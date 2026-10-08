@@ -1,6 +1,5 @@
 import CopyEmailButton from '../components/CopyEmailButton.tsx';
 import Icon from '../components/Icon.tsx';
-import PrintResumeButton from '../components/PrintResumeButton.tsx';
 import {profile} from '../content/profile.ts';
 import '../styles/Contact.css';
 
@@ -20,7 +19,6 @@ const Contact = () => (
                     <Icon name="github"/>
                     GitHub
                 </a>
-                <PrintResumeButton/>
             </div>
         </div>
     </section>
