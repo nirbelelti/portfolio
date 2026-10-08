@@ -28,14 +28,15 @@ export const navSections: NavSection[] = [
 export interface Fact {
     label: string;
     value: string;
+    wide?: boolean;
 }
 
 export const atAGlance: Fact[] = [
     {label: 'Role', value: 'Full-stack software engineer'},
     {label: 'Based in', value: 'Copenhagen, Denmark'},
     {label: 'Building software since', value: '2016'},
-    {label: 'Core stack', value: 'Ruby on Rails · PostgreSQL · Hotwire'},
     {label: 'Languages', value: 'English, Danish, Hebrew'},
+    {label: 'Core stack', value: 'Ruby on Rails · PostgreSQL · Hotwire · Python · Java', wide: true},
 ];
 
 export interface PortraitNote {

@@ -7,7 +7,7 @@ const AtAGlance = () => (
         <h2 className="visually-hidden">At a glance</h2>
         <dl className="glance__facts">
             {atAGlance.map((fact) => (
-                <div key={fact.label} className="glance__fact">
+                <div key={fact.label} className={`glance__fact ${fact.wide ? 'glance__fact--wide' : ''}`}>
                     <dt className="label">{fact.label}</dt>
                     <dd>{fact.value}</dd>
                 </div>
