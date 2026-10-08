@@ -5,14 +5,22 @@
     padding: var(--space-6);
     border: 1px solid var(--rule);
     border-radius: var(--radius-lg);
-    background: var(--paper-raised);
+    background: var(--surface-sheen), var(--paper-raised);
     box-shadow: var(--shadow-sm);
-    transition: border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
+    transition: border-color var(--duration-base) var(--ease-out),
+        box-shadow var(--duration-base) var(--ease-out),
+        transform var(--duration-base) var(--ease-out);
 }
 
 .project:hover {
     border-color: var(--rule-strong);
     box-shadow: var(--shadow-md);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .project:hover {
+        transform: translateY(-2px);
+    }
 }
 
 .project:target {
@@ -61,7 +69,8 @@
     align-items: center;
     gap: var(--space-2);
     min-height: 2.75rem;
-    color: var(--accent);
+    color: var(--ink-muted);
+    transition: color var(--duration-fast) var(--ease-out);
     font-size: var(--text-sm);
     font-weight: 500;
     list-style: none;
@@ -72,9 +81,14 @@
     display: none;
 }
 
+.project__details summary:hover {
+    color: var(--ink);
+}
+
 .project__details summary svg {
     width: 1rem;
     height: 1rem;
+    color: var(--accent);
     transition: transform var(--duration-base) var(--ease-out);
 }
 

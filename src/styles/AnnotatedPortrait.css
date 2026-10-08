@@ -2,6 +2,16 @@
     --drawing-width: 58%;
     position: relative;
     aspect-ratio: 100 / 90;
+    isolation: isolate;
+}
+
+.portrait::before {
+    content: '';
+    position: absolute;
+    inset: -12% 30% -6% -18%;
+    z-index: -1;
+    background: radial-gradient(closest-side, var(--accent-glow), transparent);
+    pointer-events: none;
 }
 
 .portrait__drawing {

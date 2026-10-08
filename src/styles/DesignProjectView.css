@@ -55,6 +55,16 @@
     transform: scale(1.02);
 }
 
+.design__picture {
+    filter: var(--sheet-dim);
+    transition: filter var(--duration-base) var(--ease-out);
+}
+
+.design__picture:hover,
+.design__picture:focus-visible {
+    filter: none;
+}
+
 .design__picture svg {
     position: absolute;
     right: var(--space-2);

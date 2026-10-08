@@ -21,7 +21,7 @@
     max-height: calc(100dvh - 2 * var(--space-4));
     border: 1px solid var(--rule);
     border-radius: var(--radius-lg);
-    background: var(--paper-raised);
+    background: var(--surface-sheen), var(--paper-raised);
     box-shadow: var(--shadow-lg);
     overflow: hidden;
 }
