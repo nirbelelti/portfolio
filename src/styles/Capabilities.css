@@ -47,7 +47,12 @@
 
 .capability__evidence a::before {
     content: '→';
-    color: var(--ink-faint);
+    color: var(--accent-soft);
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+.capability__evidence a:hover::before {
+    color: var(--accent);
 }
 
 .capabilities__other {

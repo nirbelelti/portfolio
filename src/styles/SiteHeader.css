@@ -59,7 +59,7 @@
     right: var(--space-3);
     bottom: 0.6rem;
     height: 1px;
-    background: currentColor;
+    background: var(--accent);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform var(--duration-base) var(--ease-out);

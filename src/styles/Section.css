@@ -15,7 +15,7 @@
     height: 1px;
     margin-right: var(--space-3);
     vertical-align: middle;
-    background: currentColor;
+    background: var(--accent-soft);
 }
 
 .section__title {
