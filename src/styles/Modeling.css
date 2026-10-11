@@ -1,33 +1,28 @@
-.diagram-fade-in {
-    animation: diagramFadeIn 0.6s ease-in;
+.track + .track {
+    margin-top: var(--space-9);
 }
 
-@keyframes diagramFadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
+.track__header {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
 }
 
-.diagram-badge {
-    font-size: 0.7rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+.track__title {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    font-weight: 450;
+    line-height: 1.15;
+    text-wrap: balance;
 }
 
-.diagram-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.track__intro {
+    max-width: var(--reading-width);
+    color: var(--ink-muted);
 }
 
-.diagram-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5) !important;
-}
-
-.diagram-hint {
-    font-size: 0.8rem;
-    color: silver;
-}
-
-.progression-strip {
-    border-left: 3px solid #0d6efd;
-    padding-left: 1rem;
+.track__takeaway {
+    max-width: var(--reading-width);
+    margin-top: var(--space-6);
+    color: var(--ink-muted);
 }
