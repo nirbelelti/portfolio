@@ -21,7 +21,7 @@ A single-page React + TypeScript site, prerendered to static HTML at build time 
 - `src/sections/` — one component per page section, in page order (see `App.tsx`).
 - `src/components/` — shared building blocks (header, section wrapper, image dialog, tags, icons).
 - `src/hooks/` — scroll state, active section, reveal-on-scroll, legacy route redirect, print behaviour.
-- `src/styles/tokens.css` — the design system: colour (light and dark), type, spacing, radius, shadow and motion tokens.
+- `src/styles/tokens.css` — the design system: colour (dark theme, single blue accent), type, spacing, radius, depth and motion tokens.
 - `src/styles/print.css` — turns the page into a résumé when printed or saved as PDF.
 - `scripts/prerender.mjs` — renders the app to HTML after the build and preloads the above-the-fold fonts.
 
