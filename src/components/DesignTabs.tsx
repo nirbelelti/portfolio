@@ -12,7 +12,15 @@ const DesignTabs = () => {
 
     return (
         <div className="design-tabs" data-reveal>
-            <div className="design-tabs__list" role="tablist" aria-label="Design projects" onKeyDown={onKeyDown}>
+            <p id="design-tabs-prompt" className="design-tabs__prompt label">
+                Select a prototype
+            </p>
+            <div
+                className="design-tabs__list"
+                role="tablist"
+                aria-labelledby="design-tabs-prompt"
+                onKeyDown={onKeyDown}
+            >
                 {designProjects.map((project, index) => (
                     <button
                         key={project.id}
