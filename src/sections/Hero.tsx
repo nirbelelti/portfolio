@@ -14,20 +14,21 @@ const Hero = () => (
                     </span>
                     <span className="visually-hidden">: </span>
                     <span className="hero__claim">
-                        Engineering today’s software with <em>tomorrow</em> in mind.
+                        Building software that <em>adapts</em> as products evolve.
                     </span>
                 </h1>
                 <div className="hero__lead">
                     <p>
-                        I’m a full-stack engineer with a strong focus on backend development. I learn quickly, work
-                        in short iterations, and sketch the system before I build it, so it stays flexible as
-                        requirements change.
+                        I’m a full-stack engineer with a strong focus on backend development. I sketch the system
+                        before I build it and work in short iterations, so software stays adaptable as the product
+                        grows and changes.
                     </p>
                     <p>
-                        I’ve worked as a professional software developer since 2016 and moved to freelancing in
-                        2023. I hold an MSc in Computer Science and Engineering from DTU, specialising in security,
-                        and a BA in Business Administration — a mix of technical and business thinking I bring to
-                        every problem.
+                        Since 2016 I’ve built software products, including seven years on a MedTech SaaS, and I’ve
+                        been freelancing since 2023. I hold an MSc in Computer Science and Engineering from DTU,
+                        specialising in security, and a BA in Business Administration. That combination shapes how I
+                        work: with attention to the architecture, the people using the product, and the business
+                        problem it needs to solve.
                     </p>
                 </div>
                 <div className="hero__actions">
